@@ -3,7 +3,13 @@ from django.contrib.auth.models import User
 from rest_framework import generics 
 from.serializers import UserSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from 
 # Create your views here.
+
+
+class NoteListCreate(generics.ListCreateAPIView):
+    serializer_class = NoteSerializer
+
 
 
 class CreateUserView(generics.CreateAPIView):
